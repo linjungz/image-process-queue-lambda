@@ -1,10 +1,10 @@
 #!/bin/bash
-queueUrl="https://sqs.ap-southeast-1.amazonaws.com/294254988299/sam-test-stack-TaskQueue-4AVYU7NOA72I"
+queueUrl="https://sqs.ap-southeast-1.amazonaws.com/294254988299/sam-test-stack-TaskQueue-4AVYU7NOA72I" #修改为正确的SQS队列url
 msgCount=10
 
 for ((i=1;i<=$msgCount;i++))
 do
-    link='https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1769&q=80'
+    link='https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1769&q=80' # 测试图片地址
     key="pic$i.jpg"
     msg=$(jq -n -r \
        --arg link $link \

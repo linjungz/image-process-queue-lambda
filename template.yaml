@@ -27,7 +27,7 @@ Resources:
             BatchSize: 10
       Policies:
         - S3WritePolicy:
-            BucketName: "dhgate-test"
+            BucketName: "dhgate-test"  # 修改为目标存储桶的桶名
           
 
   TaskQueue:

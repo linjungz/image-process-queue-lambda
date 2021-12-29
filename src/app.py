@@ -3,10 +3,10 @@ import requests
 import boto3
 
 sqs = boto3.client('sqs')
-queueUrl = "https://sqs.ap-southeast-1.amazonaws.com/294254988299/sam-test-stack-TaskQueue-4AVYU7NOA72I"
+queueUrl = "https://sqs.ap-southeast-1.amazonaws.com/294254988299/sam-test-stack-TaskQueue-4AVYU7NOA72I"  #修改为正确的SQS队列URL
 
 s3 = boto3.client('s3')
-bucketName = "dhgate-test"
+bucketName = "dhgate-test"  #修改为正确的S3存储桶桶名
 
 
 def lambda_handler(event, context):
